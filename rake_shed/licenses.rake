@@ -1,7 +1,6 @@
 require 'erb'
 require 'ostruct'
 
-default_license      = :mit
 default_license_task = 'license:employer'
 employer             = 'AppFolio'
 employer_license     = :mit
@@ -12,7 +11,11 @@ def licenses
     mit: {
       template:  'mit_license.txt.erb',
       url:       'http://www.opensource.org/licenses/MIT',
-    }
+    },
+    unlicense: {
+      template:  'unlicense.txt.erb',
+      url:       'http://unlicense.org',
+    },
   }
 end
 
@@ -44,6 +47,11 @@ namespace :license do
 
   desc 'Print the URL to the MIT license and output the LICENSE text to ./LICENSE'
   task :mit do
-    write_license default_license, name
+    write_license :mit, name
+  end
+
+  desc 'Print the URL to the unlicense and output the LICENSE text to ./LICENSE'
+  task :unlicense do
+    write_license :unlicense, name
   end
 end
