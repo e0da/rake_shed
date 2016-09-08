@@ -2,7 +2,7 @@ require 'erb'
 require 'ostruct'
 
 default_license_task = 'license:employer'
-employer             = 'AppFolio'
+employer             = 'TrackR'
 employer_license     = :mit
 name                 = (`git config --get user.name` or '').chomp
 
