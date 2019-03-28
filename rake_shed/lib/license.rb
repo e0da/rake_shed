@@ -2,7 +2,7 @@ class License
 
   NAME             = (`git config --get user.name` or '').chomp.freeze
   EMAIL            = (`git config --get user.email` or '').chomp.freeze
-  EMPLOYER_NAME    = 'TrackR'.freeze
+  EMPLOYER_NAME    = 'Adero'.freeze
 
   PREFERRED_LICENSES = {
     employer: :mit,
