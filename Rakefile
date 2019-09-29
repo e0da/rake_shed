@@ -30,6 +30,8 @@ def link_to_rake_dir(file)
   end
 end
 
+task default: :install
+
 desc 'Install the rake tasks (symlink them into ~/.rake)'
 task install: 'symlink:rake_shed'
 
